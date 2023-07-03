@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Keepers
+{% endblock %}
+
+{% block main %}
+    <h1>Submit Keeper Below</h1>
+
+    <form action="/keeper" method="post">
+        <div class="input-group mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="keeper" name="keeper" placeholder="Name of Keeper" type="text">
+        </div>
+        <div>
+            <button class="btn btn-dark" type="submit">Submit Keeper</button>
+        </div>
+        <div>
+            <a href="/changekeeper" style="color:black;">Change Keeper</a>
+        </div>
+    </form>
+{% endblock %}

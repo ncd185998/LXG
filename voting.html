@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Voting
+{% endblock %}
+
+{% block main %}
+<h1>Amendment Voting</h1>
+<h4>Gentlemen, see reference table below. Make sure you are inserting the corresponding number and your vote from the dropdown menu. Please take careful consideration as votes cannot be changed. Please do your due diligence to ensure you are matching the numbers and your votes accordingly, as they can only be submitted once. Happy voting. </h4>
+<h4>**Please do not be confused by the numbering system. The numbers DO NOT correspond to what is reflected in the Constitution. The numbering for voting purposes is completely different. Again, see table for reference on numbers.**</h4>
+<br></br>
+<form id="voting" action="/voting" method="post">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Number</th>
+            <th scope="col">Vote</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td>
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="number" name="number" placeholder="Amendment Number" type="text"></input>
+              </td>
+              <td>
+                <select name="vote" id="vote">
+                  <option>Select</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </td>
+              <td>
+                <button class="btn btn-dark" type="submit">Submit Vote</button>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+</form>
+<br></br><br></br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Reason</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in database %}
+      <tr>
+        <th scope="row"> {{ row["number"] }} </th>
+        <td> {{ row["name"] }} </td>
+        <td> {{ row["description"] }}</td>
+        <td> {{ row["reason"] }} </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<a href="/votelog" style="color:black;">Vote Log</a>
+
+
+{% endblock %}

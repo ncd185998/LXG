@@ -1,0 +1,40 @@
+pythonanywhere
+ncd185998
+Mavericks185998!
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5D6LVktojsnJaxqCfHOx7iys9+J1awXjN99NUAWES/BDGjwszyvCNbSyh0iTZSK
+WbRhEPIiqtJK8ssveF59B6VPH6T3RF8WEb5zVBtIzk6ZTglga6enHoDmTY86Jr5KRFHgDKoXwGu8DZTAsmZpYKbBUqIlPCDi3sOykY
++x3k5LCr1zDycoVzKxgUBy0waWpxDcedYxNFsZlLdmAHDQtrm4+AlK62maAUnEbr/RxjA9H0prN9WBWFWhYVjJcNIsLd+DljCNq+hA
+zgLLlaCp3AnhVpt/c3lZx6i+csq249QApNLs7OHO38K/2yzoQ1TxoI3c/mncDitbTuXBRWO7ORKsTEBmWob5pXunB6qubKgS7sIYKA
+UL1beCxWldeWxwPkiIUJMZng+uCsyE1phlqopThVXmdtexqRhX9Ydr8thTR3L8sM+o07jYsK+MwNN63PX6EqZPnTy1uwa7v+MTehf/
+ysQGHwi3PA+az7W7i743tcB+HZ4FkGrM6stQqCZec= ncd185998@green-liveconsole10
+
+
+Colors:
+    Slate grey background: #696969
+
+Logo colors:
+    Dark blue
+    Lighter blue
+    Light grey (suit)
+    Brown (football)
+
+Font:
+    font-family: Verdana, sans-serif;
+
+Login information:
+noah
+    username: noahcdickson
+    password: offconstantly!
+rj
+    username: rjochoa
+    password: cowboysrule
+bobby
+    username: bobbettesal
+    password: saintsrule
+jeremy
+    username: jrod
+    password: cowboys
+roy
+    username: bigroy
+    password: demboyz

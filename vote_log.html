@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Voting
+{% endblock %}
+
+{% block main %}
+<h1>Vote Log</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">User ID</th>
+      <th scope="col">Amendment Number</th>
+      <th scope="col">Amendment Name</th>
+      <th scope="col">Vote</th>
+      <th scope="col">Submission Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in database %}
+      <tr>
+        <th scope="row"> {{ row["user_id"] }} </th>
+        <td> {{ row["number"] }} </td>
+        <td> {{ row["name"] }}</td>
+        <td> {{ row["vote"] }} </td>
+        <td> {{ row["date"] }} </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br></br><br></br><br></br>
+
+  <h1> {{ vote_count_yes }} </h1>
+  <h1> {{ vote_count_no }} </h1>
+
+
+{% endblock %}

@@ -1,0 +1,65 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+    font-family: Verdana, sans-serif;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+
+
+body {
+    background-color: white;
+}
+
+footer {
+    font-family: Verdana, sans-serif;
+    color: black;
+}
+
+.nav-link {
+    color: white;
+    font-family: Verdana, sans-serif;
+
+}
+
+.list-group-item {
+    color: black;
+    background-color: #696969;
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    font-family: Verdana, sans-serif;
+}
+
+h4 {
+    font-family: Verdana, sans-serif;
+}
+
+
+input {
+    text-align: center;
+  }
+
+  ::-webkit-input-placeholder {
+    text-align: center;
+  }
+
+  :-moz-placeholder {
+    text-align: center;
+  }
+
+div {
+    font-family: Verdana, sans-serif;
+}
+
+.members {
+    background-color: #696969;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}

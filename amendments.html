@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Amendments
+{% endblock %}
+
+{% block main %}
+<h1>Amendment Submission</h1>
+
+<form action="/amendments" method="post">
+    <div class="input-group mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="Name of Proposal" type="text">
+    </div>
+    <div class="input-group mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="description" name="description" placeholder="Detailed Description of Proposal" type="text">
+    </div>
+    <div class="input-group mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="reason" name="reason" placeholder="Reasons for Submitting Proposal" type="text">
+    </div>
+    <button class="btn btn-dark" type="submit">Submit Amendment</button>
+</form>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Manager</th>
+        <th scope="col">Team</th>
+        <th scope="col">Submission Date</th>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Reason</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in database %}
+        <tr>
+          <th scope="row"> {{ row["number"] }} </th>
+          <td> {{ row["manager"] }} </td>
+          <td> {{ row["team"] }}  </td>
+          <td> {{ row["date"] }} </td>
+          <td> {{ row["name"] }} </td>
+          <td> {{ row["description"] }}</td>
+          <td> {{ row["reason"] }} </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+  <br></br>
+  <div>
+    <h1>
+      <a href="/voting" style="color:black;">Voting Page</a>
+    </h1>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <h1>Welcome {{ manager_name_real }}</h1>
+    <img class="img-fluid" src="/static/images/LXG_LOGO_WHITEBACKGROUND.png"></img>
+    <h1>2023 LXG FANTASY FOOTBALL SEASON</h1>
+    <br></br>
+    <div>
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQmrHtUM_E-_KwgNj3WElsKcW03FwS0iI1kJ8BL-zNJGFEwvKKa_dEvqifLbTsVlVyJGKDrmha0rqre/pub?embedded=true" style="border-style: none; width: 830px; height: 1200px;"></iframe>
+    </div>
+    <br></br><br></br><br></br>
+    <div>
+        <h1>2023 DIVISIONS</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Division</th>
+                    <th scope="col">Manager</th>
+                    <th scope="col">Team</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Extraordinary</th>
+                  <td>RJ Ochoa</td>
+                  <td>The Ochosen One</td>
+                </tr>
+                <tr>
+                    <th scope="row">Extraordinary</th>
+                    <td>Mike Frey</td>
+                    <td>Calvin and Robs</td>
+                </tr>
+                <tr>
+                    <th scope="row">Extraordinary</th>
+                    <td>Jimmy Sethna</td>
+                    <td>Cumdog Millionare</td>
+                </tr>
+                <tr>
+                    <th scope="row">Extraordinary</th>
+                    <td>Josh Measles</td>
+                    <td>The No Fly Zone</td>
+                </tr>
+                <tr>
+                    <th scope="row">Extraordinary</th>
+                    <td>Noah Dickson</td>
+                    <td>Off Constantly</td>
+                </tr>
+                <tr>
+                    <th scope="row">Gentlemen</th>
+                    <td>JD Vela</td>
+                    <td>Quon Solo</td>
+                </tr>
+                <tr>
+                    <th scope="row">Gentlemen</th>
+                    <td>Roy Ochoa</td>
+                    <td>RGV Henchmen</td>
+                </tr>
+                <tr>
+                    <th scope="row">Gentlemen</th>
+                    <td>Jeremy Rodriguez</td>
+                    <td>Baytown Badboys</td>
+                </tr>
+                <tr>
+                    <th scope="row">Gentlemen</th>
+                    <td>Bobby Salehi</td>
+                    <td>WHO DAT NATION OF ISLAM</td>
+                </tr>
+                <tr>
+                    <th scope="row">Gentlemen</th>
+                    <td>Angelo Ramirez</td>
+                    <td>Zekeing Dak Beadle</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br></br><br></br><br></br>
+    <div>
+        <h1>2023 KEEPERS</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Team</th>
+                    <th scope="col">Manager</th>
+                    <th scope="col">Keeper</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for row in database %}
+                <tr>
+                  <th scope="row"> {{ row["team"] }} </th>
+                  <td> {{ row["manager"] }} </td>
+                  <td> {{ row["keeper"] }} </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+        </table>
+    </div>
+    <div>
+        <a href="/keeper" style="color:black;">Submit Keeper</a>
+    </div>
+
+    <br></br><br></br><br></br>
+
+    <div>
+        <h1>2023 DRAFT ORDER</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Draft Pick</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Manager</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Jimmy Sethna</td>
+                    <td>Cumdog Millionaire</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jeremy Rodriguez</td>
+                    <td>Baytown Badboys</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Josh Measles</td>
+                    <td>The No Fly Zone</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Bobby Salehi</td>
+                    <td>WHO DAT NATION OF ISLAM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Noah Dickson</td>
+                    <td>Off Constantly</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Angelo Ramirez</td>
+                    <td>Zekeing Dak Beadle</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Roy Ochoa</td>
+                    <td>RGV Henchmen</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>Mike Frey</td>
+                    <td>Calvin and Robs</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>JD Vela</td>
+                    <td>Quon Solo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td>RJ Ochoa</td>
+                    <td>The Ochosen One</td>
+                  </tr>
+              </tbody>
+        </table>
+    </div>
+
+{% endblock %}
